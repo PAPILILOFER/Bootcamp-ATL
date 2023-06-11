@@ -16,7 +16,7 @@ public class JuegoClasico {
         int defeatPlayer1 = 0;
         int defeatComputadora = 0;
 
-        String elecciones[] = {"Piedra", "Papel", "Tijera"};
+        String[] elecciones = new String[]{"Piedra", "Papel", "Tijera"};
         Scanner opcion = new Scanner(System.in);
         Random Aleatorio = new Random();
         System.out.println("************* Juego de piedra, papel o tijera *************\n"
@@ -27,27 +27,15 @@ public class JuegoClasico {
 
         while (victoryPlayer1 < 3 && victoryComputadora < 3) {
 
-            int Player1 = 0;
+            int Player1;
 
             do {
                 Player1 = opcion.nextInt();
                 switch (Player1) {
-                    case 0:
-                        System.out.println("haz elegido: " + elecciones[0]);
-                        break;
-                    case 1:
-                        System.out.println("haz elegido: " + elecciones[1]);
-
-                        break;
-                    case 2:
-                        System.out.println("haz elegido: " + elecciones[2]);
-
-                        break;
-
-                    default:
-                        System.out.println("haz ingresado una opcion invalida, Vuelve a intentarlo");
-
-                        break;
+                    case 0 -> System.out.println("haz elegido: " + elecciones[0]);
+                    case 1 -> System.out.println("haz elegido: " + elecciones[1]);
+                    case 2 -> System.out.println("haz elegido: " + elecciones[2]);
+                    default -> System.out.println("haz ingresado una opcion invalida, Vuelve a intentarlo");
                 }
             } while (!(Player1 >= 0 && Player1 < 3));
 
@@ -86,7 +74,7 @@ public class JuegoClasico {
         }
         if (victoryPlayer1 >= 3) {
             System.out.println("¡El player1 ha ganado el juego felicidades!");
-        } else if (victoryComputadora >= 3) {
+        } else {
             System.out.println("¡\"¡La computadora ha ganado el juego felicidades!");
         }
     }
