@@ -13,7 +13,7 @@ public class Whatsapp {
     public static void main(String[] args) {
         Scanner input= new Scanner(System.in);
         System.out.println("Ingrese un numero de whatsapp ");
-        Long Telefono=input.nextLong();
+        long Telefono=input.nextLong();
         System.out.println("https://api.whatsapp.com/send?phone=" + Telefono);
     }
 }
