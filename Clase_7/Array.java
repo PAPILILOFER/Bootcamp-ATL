@@ -16,8 +16,9 @@ public class Array {
         int Maximo = Integer.MIN_VALUE;
         int[] numero = new int[5];
 
+        System.out.println("\nIngrese un total de 5 numeros porfavor:\n ");
         for (int Cont = 0; Cont < numero.length; Cont++) {
-            System.out.println("Ingrese el numero " + (Cont + 1));
+            System.out.println("Ingrese el numero " + (Cont + 1)+":");
 
             int Numero = input.nextInt();
             numero[Cont] = Numero;
@@ -50,7 +51,6 @@ public class Array {
         System.out.println("La suma de los valores ingresados es: " + suma + "\n");
         double promedio = (suma / numero.length);
         System.out.println("el promedio de los valores ingresados es " + promedio);
-
 
     }
 }
